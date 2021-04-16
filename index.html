@@ -1,13 +1,16 @@
-<!-- title: include a form to fetch the name and the email address of the user and print it in the console -->
+<!-- title: Create your own game using event handlers -->
 <!-- description: 
-    For the form the values of the input is fetched after the click event triggered by the submit button
-    from the document.getElementByID(); we fetch the values and print
-
-    For the tample maze we use onmouseenter to trigger event and call a function by passing different parameters 
-    inside different divs and accordingly print the location of the cursor in the console through the function called;
+    create a group of divs in a flex box styling
+    select all the divs using querySelectorAll(). Now for each div add an event listener on click
+    create variables gameStarted and resultCount globally
+    initially when event is triggered set gameStarted to true and generate a random number b/w 0-9 and set resultCount to thata random number
+    The div at the index [random_number] will be the matching div
+    now when event is again triggered gameStarted is true and check the id of div === resultCount
+    if equal ==> User wins
+    else ==> user looses
 -->
 <!-- author : keerthi@1nt18is079 -->
-<!-- date : 04/07/2021 -->
+<!-- date : 16/04/2021 -->
 
 
 
@@ -25,7 +28,7 @@
         padding: 50px;
     }
 
-    #compoundRange{
+    /* #compoundRange{
         width : 300px;
         height: 300px;
         background-color: black;
@@ -47,12 +50,36 @@
        background-color: crimson;
        height: 5px;
        width: 150px;
+    } */
+
+    .childHolder{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
+
+    .child{
+        background : blue;
+    }
+
+    .heading{
+        margin : auto;
+        padding : 0;
+        text-align: center;
+        background: #2eb555;
+        color: white;
+    }
+
+    #instructions{
+        background-color: rgb(236, 165, 71);
+        color : white;
+    }
+    
 </style>
-<script src="index.js"></script>
+
 <body>
     
-    <h1>Keerthi k v</h1>
+    <!-- <h1>Keerthi k v</h1>
     <h3>Dept of ISE</h3>
 
     <input type="text" id="name" placeholder="name"><br><br>
@@ -67,8 +94,31 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="heading">
+        <h2>Welcome to the puzzle click any block below and find the hidden matching block to win the game</h2>
     </div>
 
-    
+    <p>Instructions : <span id="instructions">Click any box</span></p>
+    <div class="gameDivParent">
+        <div class="childHolder">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="childHolder">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+        <div class="childHolder">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
