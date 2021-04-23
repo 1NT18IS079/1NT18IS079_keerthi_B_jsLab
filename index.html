@@ -1,16 +1,14 @@
-<!-- title: Create your own game using event handlers -->
+<!-- title: using array and objects create an application -->
 <!-- description: 
-    create a group of divs in a flex box styling
-    select all the divs using querySelectorAll(). Now for each div add an event listener on click
-    create variables gameStarted and resultCount globally
-    initially when event is triggered set gameStarted to true and generate a random number b/w 0-9 and set resultCount to thata random number
-    The div at the index [random_number] will be the matching div
-    now when event is again triggered gameStarted is true and check the id of div === resultCount
-    if equal ==> User wins
-    else ==> user looses
+    application : create a song playlist for yourself
+    create an empty array called songs
+    take inputs(songName, singerName, lyrics) from the user and when they click "add", collect the input data and create an object newSong
+    having attributes (name, singer, lyrics) and assign the corressponding values for them.
+    now push this newSong object to the empty songs array.
+    
 -->
 <!-- author : keerthi@1nt18is079 -->
-<!-- date : 16/04/2021 -->
+<!-- date : 23/04/2021 -->
 
 
 
@@ -52,7 +50,7 @@
        width: 150px;
     } */
 
-    .childHolder{
+    /* .childHolder{
         display:flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -73,6 +71,16 @@
     #instructions{
         background-color: rgb(236, 165, 71);
         color : white;
+    } */
+
+    
+    ul li{
+        border : 2px solid blue;
+        margin : 5px;
+    }
+
+    input, textarea{
+        padding : 5px;
     }
     
 </style>
@@ -96,7 +104,7 @@
         </div>
     </div> -->
 
-    <div class="heading">
+    <!-- <div class="heading">
         <h2>Welcome to the puzzle click any block below and find the hidden matching block to win the game</h2>
     </div>
 
@@ -117,7 +125,21 @@
             <div class="child"></div>
             <div class="child"></div>
         </div>
-    </div>
+    </div> -->
+
+    <h1>Create your own playlist</h1>
+    
+    <input type="text" placeholder="Add song name" id = "songName">
+    <input type="text" placeholder="Add singer name" id = "singer"><br><br>
+    <textarea name="" id="songLyrics" cols="30" rows="10"></textarea>
+    <button id = "btn">Add</button>
+    
+    <ul id = "list">
+
+    </ul>
+
+    <br><br>
+    <button id = "btnDisp">Log all songs</button>
 
     <script src="index.js"></script>
 </body>
