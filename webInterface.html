@@ -1,0 +1,54 @@
+<!-- title: Use Array of objects and store nested data -->
+<!-- description: 
+    application : create player data 
+    create an array of players with properties
+    name, age, teams(array)
+    also include search functionality
+-->
+<!-- author : keerthi@1nt18is079 -->
+<!-- date : 28/05/2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+    <style>
+        *{
+            margin: 20px
+        }
+        input{
+            padding: 5px
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Enter the player data</h1>
+
+    <div>
+        <label>Player Name</label>
+        <input type="text" placeholder="Enter player name" id="pName"><br><br>
+
+        <label>Player Age</label>
+        <input type="text" placeholder="Enter Age" id="age"><br><br>
+
+        <label>Enter IPL teams played by the player</label>
+        <input type="text" placeholder="Enter IPL team" id="team">
+        <input type="submit" value="Add team" id="addTeam"><br><br>
+
+        <input type="submit" value="Add player" id="addPlayer">
+    </div>
+
+    <div>
+        <h2>Search Player by Name</h2>
+        <input type="text" id="sName">
+        <input type="submit" id="submitSearch">
+    </div>
+
+    <script src="./28.05.21.js"></script>
+</body>
+</html>
