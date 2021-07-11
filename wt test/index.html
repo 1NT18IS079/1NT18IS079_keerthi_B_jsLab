@@ -1,0 +1,86 @@
+<!-- https://meet.google.com/zxw-ojny-egk 
+	
+track rain data in karnataka
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Climate</title>
+
+	<style>
+	*{
+		text-align: center;
+	}
+		h1{
+			margin:  auto;
+			text-align: center;
+		}
+		span{
+			display:  block;
+			font-size: 20px;
+			margin: auto;
+		}
+
+		#data{
+			padding:  10px;
+		}
+		li{
+			margin:  5px;
+			border: 2px solid black;
+			width:  50%;
+			margin:  auto;
+			list-style: none;
+
+		}
+		input{
+			padding:  5px;
+			font-size: 15px;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<h1>RainFall Data Karnataka district wise</h1>
+
+	<div>
+		Note: 
+		NORMAL or average rainfall is the amount of precipitation that we expect per year (in a given area). it is obtained and set by calculating the average (mean) of precipitation recorded in an area during many years ( at least 30 years). Annual rainfall or precipitation is the sum of daily rainfall in a year.
+	</div>
+	<div>
+		Note: 
+		The cumulative rainfall departure (CRD) from normal rainfall is a concept sometimes utilized to evaluate the temporal correlation of rainfall with surface water or ground water levels
+	</div>
+
+	<h3>Total data records: <span id="getLen"></span></h3>
+	<div id="data">
+		<ul id="list">
+			
+		</ul>
+	</div>
+
+	<hr><hr>
+
+	<h1>Add data</h1><br><br>
+	<label>District name</label>
+	<input type="text" placeholder="district" id="name"><br><br>
+
+	<label>Departure</label>
+	<input type="text" placeholder="departure" id="dep"><br><br>
+
+	<label>Actual</label>
+	<input type="text" placeholder="Actual" id="actual"><br><br>
+
+	<label>Normal</label>
+	<input type="text" placeholder="Normal" id="normal"><br><br>
+
+	<input type="submit" value="Add data" id="submit">
+	<br>
+	<br>
+
+	<script src="index.js"></script>
+</body>
+</html>
